@@ -1,1 +1,1 @@
-# Certificadora-de-Compet-ncia-UTFPR
+# Certificadora-de-Competência-UTFPR
