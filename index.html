@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API na Prática | Aprenda back-end construindo uma API de biblioteca</title>
+  <meta name="description" content="Recurso Educacional Aberto para iniciantes: aprenda os fundamentos de Programação Web Back-End construindo, aula a aula, uma API REST de biblioteca comunitária.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#inicio" aria-label="API na Prática, ir para o início">API na Prática</a>
+      <nav aria-label="Principal">
+        <ul class="nav">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#aulas">Aulas</a></li>
+          <li><a href="#grupo">Grupo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== INÍCIO ===================== -->
+    <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1 id="titulo-inicio">Aprenda a construir uma API, uma rota por vez.</h1>
+          <p class="lead">
+            Um curso aberto e gratuito de programação back-end para quem está começando.
+            A cada aula você acrescenta uma peça funcional a uma API de biblioteca comunitária,
+            e no final entende o que acontece quando um aplicativo pede um dado a um servidor.
+          </p>
+          <p class="actions">
+            <a class="btn btn-primary" href="#aulas">Ver as aulas</a>
+            <a class="btn" href="#grupo">Conhecer o grupo</a>
+          </p>
+        </div>
+
+        <!-- Demonstração: a parte "memorável" da página -->
+        <div class="slip" role="group" aria-labelledby="slip-titulo">
+          <h2 id="slip-titulo" class="slip-title">Experimente um pedido</h2>
+          <p class="slip-help">Escolha um endereço da API da biblioteca e veja a resposta do servidor.</p>
+
+          <div class="routes" id="routes" role="group" aria-label="Endereços disponíveis"></div>
+
+          <div class="slip-result" aria-live="polite" aria-atomic="true">
+            <div class="slip-status">
+              <span class="stamp" id="slip-code">200</span>
+              <span id="slip-meaning">Deu certo.</span>
+            </div>
+            <pre class="code" id="slip-body" tabindex="0" aria-label="Corpo da resposta"></pre>
+          </div>
+          <p class="slip-note">Simulação ilustrativa. Nas aulas, é a sua própria API que responde.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-projeto">
+      <div class="wrap">
+        <h2 id="titulo-projeto">Sobre o projeto</h2>
+        <div class="two-col">
+          <div class="prose">
+            <p>
+              <strong>API na Prática</strong> é um Recurso Educacional Aberto criado para ensinar
+              noções fundamentais de Programação Web Back-End a pessoas sem formação técnica superior.
+              Usamos linguagem simples, exemplos do dia a dia e uma construção incremental.
+            </p>
+            <p>
+              O produto que atravessa todas as aulas é uma API REST para uma biblioteca comunitária:
+              livros, cadastros e consultas são coisas fáceis de imaginar, o que deixa o código em primeiro plano.
+            </p>
+          </div>
+
+          <dl class="facts">
+            <div>
+              <dt>Para quem</dt>
+              <dd>Jovens e adultos a partir de 15 anos, sem formação técnica superior.</dd>
+            </div>
+            <div>
+              <dt>O que você encontra</dt>
+              <dd>Seis módulos com texto curto, glossário, videoaulas de 5 a 7 minutos, exercícios e o código de cada etapa.</dd>
+            </div>
+            <div>
+              <dt>Acessível</dt>
+              <dd>Vídeos com legendas em português e transcrição na mesma página, site navegável por teclado e código em texto selecionável.</dd>
+            </div>
+            <div>
+              <dt>Aberto</dt>
+              <dd>Conteúdos em CC BY 4.0 e código em licença MIT. Você pode usar, adaptar e compartilhar.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <h3 class="subhead">Como cada módulo funciona</h3>
+        <ol class="steps">
+          <li><strong>Leia</strong> uma página curta que parte de uma situação simples.</li>
+          <li><strong>Assista</strong> à videoaula que mostra o código sendo escrito.</li>
+          <li><strong>Teste</strong> a rota no navegador, no terminal ou em um cliente de API.</li>
+          <li><strong>Pratique</strong> com um exercício e um pequeno quiz.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== AULAS ===================== -->
+    <section id="aulas" class="section section-alt" aria-labelledby="titulo-aulas">
+      <div class="wrap">
+        <h2 id="titulo-aulas">Aulas</h2>
+        <p class="lead narrow">
+          O curso tem seis módulos. Cada módulo reúne várias aulas, com vídeo, transcrição e exercício.
+          O Módulo 1 abaixo é um exemplo da estrutura; o conteúdo real será publicado ao longo do semestre.
+        </p>
+
+        <p class="sr-only" id="soon-msg" role="status"></p>
+
+        <!-- Unidade de exemplo -->
+        <article class="unit" aria-labelledby="unit-1-titulo">
+          <header class="unit-head">
+            <div>
+              <p class="unit-tag">Módulo 1</p>
+              <h3 id="unit-1-titulo">Como a Web conversa</h3>
+            </div>
+            <span class="badge">Exemplo de estrutura</span>
+          </header>
+
+          <p class="unit-goal">
+            Ao final, você sabe dizer quem pede e quem responde em uma conversa na Web,
+            e tem a primeira rota da API funcionando: <code>GET /status</code>.
+          </p>
+
+          <dl class="unit-meta">
+            <div><dt>Aulas</dt><dd>3</dd></div>
+            <div><dt>Vídeo</dt><dd>cerca de 18 min</dd></div>
+            <div><dt>Pré-requisitos</dt><dd>nenhum</dd></div>
+            <div><dt>Código desta etapa</dt><dd><a href="#" data-soon>versão v1 do repositório</a></dd></div>
+          </dl>
+
+          <ol class="lessons">
+            <li class="lesson">
+              <div class="lesson-info">
+                <h4>Aula 1.1: Quem pede e quem responde</h4>
+                <p>Cliente e servidor explicados com o balcão de uma biblioteca.</p>
+                <p class="lesson-time">Vídeo de 5 a 7 min</p>
+              </div>
+              <ul class="lesson-links" aria-label="Materiais da aula 1.1">
+                <li><a href="#" data-soon>Vídeo</a></li>
+                <li><a href="#" data-soon>Transcrição</a></li>
+                <li><a href="#" data-soon>Exercício</a></li>
+              </ul>
+            </li>
+
+            <li class="lesson">
+              <div class="lesson-info">
+                <h4>Aula 1.2: O que é HTTP</h4>
+                <p>Requisição, resposta e a ideia de que toda conversa segue regras.</p>
+                <p class="lesson-time">Vídeo de 5 a 7 min</p>
+              </div>
+              <ul class="lesson-links" aria-label="Materiais da aula 1.2">
+                <li><a href="#" data-soon>Vídeo</a></li>
+                <li><a href="#" data-soon>Transcrição</a></li>
+                <li><a href="#" data-soon>Exercício</a></li>
+              </ul>
+            </li>
+
+            <li class="lesson">
+              <div class="lesson-info">
+                <h4>Aula 1.3: Sua primeira rota</h4>
+                <p>Criar e testar o <code>GET /status</code> no seu computador.</p>
+                <p class="lesson-time">Vídeo de 5 a 7 min</p>
+              </div>
+              <ul class="lesson-links" aria-label="Materiais da aula 1.3">
+                <li><a href="#" data-soon>Vídeo</a></li>
+                <li><a href="#" data-soon>Transcrição</a></li>
+                <li><a href="#" data-soon>Exercício</a></li>
+              </ul>
+            </li>
+          </ol>
+
+          <footer class="unit-foot">
+            <p><strong>Fechamento do módulo</strong></p>
+            <ul class="lesson-links" aria-label="Fechamento do módulo 1">
+              <li><a href="#" data-soon>Resumo e glossário</a></li>
+              <li><a href="#" data-soon>Quiz do módulo</a></li>
+              <li><a href="#" data-soon>Gabarito</a></li>
+            </ul>
+          </footer>
+        </article>
+
+        <!-- Demais módulos -->
+        <h3 class="subhead">Os próximos módulos</h3>
+        <div class="upcoming">
+          <details>
+            <summary><span class="u-title">Módulo 2: Rotas como endereços</span><span class="badge badge-soft">Em breve</span></summary>
+            <p>URL, parâmetros, query strings e códigos HTTP. Você cria <code>GET /livros</code> e <code>GET /livros/:id</code>.</p>
+          </details>
+          <details>
+            <summary><span class="u-title">Módulo 3: Cadastro de livros</span><span class="badge badge-soft">Em breve</span></summary>
+            <p>JSON, POST, PUT, DELETE e CRUD. Você cadastra, altera e exclui livros, ainda em memória.</p>
+          </details>
+          <details>
+            <summary><span class="u-title">Módulo 4: Dados que permanecem</span><span class="badge badge-soft">Em breve</span></summary>
+            <p>Persistência, tabelas e chaves. Você conecta a API ao SQLite e reinicia o servidor sem perder os livros.</p>
+          </details>
+          <details>
+            <summary><span class="u-title">Módulo 5: Entradas seguras</span><span class="badge badge-soft">Em breve</span></summary>
+            <p>Middleware, validação e erros. Você valida campos e padroniza as mensagens de erro.</p>
+          </details>
+          <details>
+            <summary><span class="u-title">Módulo 6: Qualidade e publicação</span><span class="badge badge-soft">Em breve</span></summary>
+            <p>Testes automatizados, documentação e uso responsável. Você testa as rotas e documenta a API.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GRUPO ===================== -->
+    <section id="grupo" class="section" aria-labelledby="titulo-grupo">
+      <div class="wrap">
+        <h2 id="titulo-grupo">O grupo</h2>
+        <p class="lead narrow">
+          Somos cinco estudantes que desenvolvem este projeto de extensão na disciplina de
+          Programação Web Back-End. Cada pessoa lidera uma frente, mas todos participam de
+          conteúdo, código, testes, gravação e revisão.
+        </p>
+
+        <ul class="team">
+          <li>
+            <h3>Giovane Soldera</h3>
+            <p class="role">Product Owner e líder de arquitetura</p>
+            <p>Prioriza o backlog, valida o escopo e orienta a estrutura da API.</p>
+          </li>
+          <li>
+            <h3>Gustavo Taborda</h3>
+            <p class="role">Scrum Master e líder de qualidade</p>
+            <p>Facilita as cerimônias, define os testes e revisa os pull requests.</p>
+          </li>
+          <li>
+            <h3>Carlos Eduardo</h3>
+            <p class="role">Líder de conteúdo e didática</p>
+            <p>Escreve as páginas e o glossário e cuida da linguagem simples.</p>
+          </li>
+          <li>
+            <h3>Guilherme Guimarães</h3>
+            <p class="role">Líder do site e acessibilidade</p>
+            <p>Constrói o site e garante responsividade, teclado e contraste.</p>
+          </li>
+          <li>
+            <h3>Felipe Yamada</h3>
+            <p class="role">Líder audiovisual e de aplicação</p>
+            <p>Grava e edita as videoaulas, produz legendas e organiza a oficina.</p>
+          </li>
+        </ul>
+
+        <div class="two-col method">
+          <div class="prose">
+            <h3>Como trabalhamos</h3>
+            <p>
+              Usamos Scrum com sprints de duas semanas e um quadro Kanban no GitHub Projects.
+              Todo o histórico, as tarefas e as revisões ficam públicos no repositório.
+            </p>
+          </div>
+          <div class="prose">
+            <h3>Encontrou uma barreira ou um erro?</h3>
+            <p>
+              Se algo no site ou nas aulas for difícil de acessar ou de entender, conte para a gente
+              abrindo uma Issue no repositório. O retorno de quem usa o material é o que o melhora.
+            </p>
+            <!-- TODO: trocar pelos endereços reais do repositório e do quadro -->
+            <p class="actions">
+              <a class="btn" href="https://github.com/SEU-USUARIO/SEU-REPOSITORIO/issues">Abrir uma Issue</a>
+              <a class="btn" href="https://github.com/SEU-USUARIO/SEU-REPOSITORIO">Ver o repositório</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p><strong>API na Prática</strong>. Projeto de extensão de Programação Web Back-End.</p>
+      <p>Conteúdos sob licença CC BY 4.0. Código sob licença MIT.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
